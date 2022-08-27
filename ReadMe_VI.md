@@ -5,15 +5,20 @@ Một wrapper nhỏ nhắn xinh xắn dùng để buff lệnh print() bằng cá
 (Yên tâm, cả PrintWithColor và colorama đều viết bằng Python hết nhé!)
 
 # **CÀI ĐẶT**
-Có 2 cách để nạp vào nhé :> tuỳ bạn chọn
+Để cài qua thư viện PyPi, hãy gõ
+
+```python
+pip install PrintWithColor
+```
+> Cho những bạn nào hỏi tại sao mình không gõ \$ trước (vì chép dòng lệnh mà dư cái \$ rất là phiền phức)
 
 
 ```python
 from PrintWithColor import printc as print
 ```
 
-# **VÍ DỤ**
-Đây là ví dụ cơ bản của **PrintWithColor**
+# **CÁCH SỬ DỤNG**
+Đây là cách sử dụng cơ bản của **PrintWithColor**
 
 
 
