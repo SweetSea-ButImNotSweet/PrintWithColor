@@ -7,4 +7,5 @@ root.withdraw()
 
 file_path = filedialog.askopenfilename()
 
-subprocess.run(['jupyter.exe', 'nbconvert', '--to', 'markdown', file_path])
+if file_path != '':
+    subprocess.run(['jupyter.exe', 'nbconvert', '--to', 'markdown', file_path])

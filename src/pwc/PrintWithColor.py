@@ -25,10 +25,18 @@ class printc():
 
         if f != 'ForegroundColor':
             set_settings(5, f)
+        else:
+            f = get_settings(5)
+
         if b != 'BackgroundColor':
             set_settings(6, b)
+        else:
+            b = get_settings(6)
+
         if s != 'Style':
             set_settings(7, s)
+        else:
+            s = get_settings(7)
 
         printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, flush = False, f = get_settings(5), b = get_settings(6), s = get_settings(7),)
 
@@ -48,7 +56,7 @@ class printc():
             7 : "LastStyle",            # ---|
         }
 
-        if n.isnumeric():
+        if str(n).isnumeric():
             if 0 < n and n < 5:
                 pass
             else:
@@ -64,6 +72,13 @@ class printc():
             
             if vaildN == False:
                 raise Exception("Not found that setting!")
-        print(n, value)
         
         set_settings(n, value)
+
+    def clear_settings():
+        from os import remove
+        try:
+            remove('PrintWithColor.settings')
+        except:
+            pass
+        del remove

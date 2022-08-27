@@ -88,7 +88,7 @@ def printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, fl
     }
 
     # Bảng màu và kiểu đúng chuẩn để kiểm tra lỗi
-    LegitColorsAndStyles = ['WHITE','RED','GREEN','YELLOW','BLUE','MAGENTA','CYAN','BLACK','DIM','NORMAL','BRIGHT']
+    LegitColors = ['WHITE','RED','GREEN','YELLOW','BLUE','MAGENTA','CYAN','BLACK']
 
     # Viết hoa các màu
     f = f.upper()
@@ -107,10 +107,10 @@ def printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, fl
         ss = styles_dict['NORMAL']
 
         '''# Đặt lại toàn bộ màu mặc định nếu màu mặc định cũng bị lỗi
-        if b == DefaultBackgroundColor or b == LastBackgroundColor or b not in LegitColorsAndStyles:
+        if b == DefaultBackgroundColor or b == LastBackgroundColor or b not in LegitColors:
             DefaultBackgroundColor = 'BLACK'
             LastBackgroundColor = 'BLACK'
-        if f == DefaultForegroundColor or f == LastForegroundColor or f not in LegitColorsAndStyles or f in ['DIM','NORMAL','BRIGHT']:
+        if f == DefaultForegroundColor or f == LastForegroundColor or f not in LegitColors or f in ['DIM','NORMAL','BRIGHT']:
             DefaultForegroundColor = 'WHITE'
             LastForegroundColor = 'WHITE'
         if s == DefaultStyle or s not in ['DIM','NORMAL','BRIGHT']:
@@ -118,16 +118,24 @@ def printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, fl
         if DoNotResetColor not in [True, False]:
             DoNotResetColor = False'''
 
-        if f == get_settings(2) or f == get_settings(5) or f not in LegitColorsAndStyles:
+        if f == get_settings(2) or f not in LegitColors:
+      # if f == DefaultForegroundColor or f == LastForegroundColor or f not in LegitColors:
             set_settings(2, 'WHITE')
+        elif f == get_settings(5):
+      # elif f == LastForegroundColor:
             set_settings(5, 'WHITE')
         
-        if b == get_settings(3) or b == get_settings(6) or b not in LegitColorsAndStyles:
+        if b == get_settings(3) or b not in LegitColors:
+      # if b == DefaultBackgroundColor or b == LastBackgroundColor or b not in LegitColors:
             set_settings(3, 'BLACK')
+        elif b == get_settings(6):
+      # elif f == LastForegroundColor:
             set_settings(6, 'BLACK')
         
-        if s == get_settings(4) or s == get_settings(7) or b not in ['DIM','NORMAL','BRIGHT']:
+        if s == get_settings(4) or b not in ['DIM','NORMAL','BRIGHT']:
             set_settings(4, 'NORMAL')
+      # elif f == LastForegroundColor:
+        elif s == get_settings(7):
             set_settings(7, 'NORMAL')
 
         if get_settings(1) not in [True, False]:
@@ -176,4 +184,7 @@ def printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, fl
         set_settings(6, b)
         set_settings(7, s)
 
-    file.close()
+    try:
+        file.close()
+    except:
+        pass
