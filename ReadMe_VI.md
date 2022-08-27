@@ -1,26 +1,18 @@
 # **PrintWithColor**
 
-Một wrapper nhỏ nhắn xinh xắn dùng để buff lệnh print() bằng cách thêm tính năng bôi màu cho chữ
-Đảm bảo mấy đứa newbie Python nhìn xong làm thử báo lỗi tè le sẽ bái phục bạn :>>>
-(Yên tâm, cả PrintWithColor và colorama đều viết bằng Python hết nhé!)
+Một wrapper nhỏ nhắn xinh xắn dùng để buff cú pháp print() bằng cách thêm tính năng tô màu cho chữ
 
-# **CÀI ĐẶT**
+# **Cách cài đặt**
 Để cài qua thư viện PyPi, hãy gõ
 
 ```python
 pip install PrintWithColor
 ```
-> Cho những bạn nào hỏi tại sao mình không gõ \$ trước (vì chép dòng lệnh mà dư cái \$ rất là phiền phức)
+> Đối với những bạn tự hỏi tại sao mình không đặt kí tự \$ trước lệnh như bao dự án khác, cái gì cũng có lý do và nó đây:
+> Bởi vì nếu bạn ***quên*** **XOÁ** ***ký tự $ bị thừa*** trong khi dán lệnh sẽ dẫn đến lệnh **bị lỗi!**, chứ còn sao nữa.
 
-
-```python
-from PrintWithColor import printc as print
-```
-
-# **CÁCH SỬ DỤNG**
+# **Cách sử dụng**
 Đây là cách sử dụng cơ bản của **PrintWithColor**
-
-
 
 ```python
 from PrintWithColor import printc as print
@@ -32,7 +24,7 @@ print('Or a line with a cyan background', f = 'black', b = 'cyan')
 
 | Đối số        | Mô tả                                                                                   | Mặc định |
 |---------------|-----------------------------------------------------------------------------------------|----------|
-| textfrominput | Nội dung bạn muốn gõ để hiện thỉ theo mặc định, cho phép sử dụng nhiều đối số           | Bất kỳ   |
+| textfrominput | Nội dung bạn muốn hiển thị trên màn hình, cho phép bạn sử dụng nhiều đối số           | Bất kỳ   |
 | sep           | Là dấu phân cách giữa các đối số (nếu chỉ có 1 đối số textfrominput thì ko có tác dụng) | ' '      |
 | end           | Kí tự kết thúc, chỉ tác dụng khi có 1 đối số/tới đối số cuối cùng của textfrominput     | '\n'     |
 | file          | Nơi xuất màn hình, trong Python mặc định sẽ là sys.stderr<br>Lưu ý là nếu đối số file là một tệp viết được, theo như lệnh print() gốc, máy sẽ viết ra tệp. Nếu có tệp mà không viết được thì sẽ __báo lỗi__ [1] | None      |
@@ -60,13 +52,13 @@ print('Or a line with a cyan background', f = 'black', b = 'cyan')
 4. Các kiểu màu được chấp nhận là ['NORMAL', 'DIM', 'BRIGHT']
 
 
-> **LƯU Ý!**    WINDOWS SẼ __**KHÔNG**__ HIỂN THỊ CHÍNH XÁC MÀU TỐI (DIM) VÀ MÀU BÌNH THƯỜNG (NORMAL)  NÊN HẦU NHƯ BẠN SẼ KHÔNG NHÌN THẤY RÕ SỰ KHÁC BIỆT
+> **LƯU Ý!** Windows sẽ __**không**__ hiển thị chính xác màu tối (dim) và màu bình thường (normal). Cho nên trong đa số trường hợp, bạn sẽ không nhìn thấy rõ sự khác biệt
 
-# **CÁC THIẾT LẬP BỔ SUNG ĐI KÈM**
+# **Các thiết lập đi kèm với cú pháp này**
 
 > **LƯU Ý**: Nếu một trong các thiết lập này bị sai, chúng sẽ bị trả giá trị về **MẶC ĐỊNH** của từng thiết lập!!!
 
-> **CÁCH GỌI:** sử dụng lệnh print.change_settings()
+> **CÁCH SỬA THIẾT LẬP:** sử dụng lệnh print.change_settings(), **ngoại trừ clear_settings()**
 
 ## **1. DoNotResetColor** (Không đặt lại màu về giá trị mặc định)
 
