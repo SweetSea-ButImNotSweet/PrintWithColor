@@ -13,9 +13,8 @@ from PrintWithColor import printc as print
 ```
 
 # **VÍ DỤ**
-Đây là ví dụ của PrintWithColor, bạn có thể chọn một trong những cái này để xem!
+Đây là ví dụ cơ bản của **PrintWithColor**
 
-### **CÚ PHÁP của PrintWithColor**
 
 
 ```python
@@ -31,7 +30,7 @@ print('Or a line with a cyan background', f = 'black', b = 'cyan')
 | textfrominput | Nội dung bạn muốn gõ để hiện thỉ theo mặc định, cho phép sử dụng nhiều đối số           | Bất kỳ   |
 | sep           | Là dấu phân cách giữa các đối số (nếu chỉ có 1 đối số textfrominput thì ko có tác dụng) | ' '      |
 | end           | Kí tự kết thúc, chỉ tác dụng khi có 1 đối số/tới đối số cuối cùng của textfrominput     | '\n'     |
-| file          | Nơi xuất màn hình, trong wrapper này sẽ sử dụng proxy object từ colorama<br>Lưu ý là nếu đối số file là một tệp viết được, theo như lệnh print() gốc, máy sẽ viết ra tệp. Nếu có tệp mà không viết được thì sẽ __báo lỗi__ [1] | None      |
+| file          | Nơi xuất màn hình, trong Python mặc định sẽ là sys.stderr<br>Lưu ý là nếu đối số file là một tệp viết được, theo như lệnh print() gốc, máy sẽ viết ra tệp. Nếu có tệp mà không viết được thì sẽ __báo lỗi__ [1] | None      |
 | flush         | Có dọn bộ đệm khi in kết quả không                                                      | False    |
 
 ### Đối số trong lệnh print() **của PrintWithColor**
@@ -41,7 +40,7 @@ print('Or a line with a cyan background', f = 'black', b = 'cyan')
 | textfrominput | Nội dung bạn muốn gõ để hiện thỉ theo mặc định, cho phép sử dụng nhiều đối số           | Bất kỳ   |
 | sep           | Là dấu phân cách giữa các đối số (nếu chỉ có 1 đối số textfrominput thì ko có tác dụng) | ' '      |
 | end           | Kí tự kết thúc, chỉ tác dụng khi có 1 đối số/tới đối số cuối cùng của textfrominput     | '\n'     |
-| file          | Nơi xuất màn hình, trong wrapper này sẽ sử dụng proxy object từ colorama<br>Lưu ý là nếu đối số file là một tệp viết được, theo như lệnh print() gốc, máy sẽ viết ra tệp. Nếu có tệp mà không viết được thì sẽ __vẫn in ra trên màn hình__ [1] | None      |
+| file          | Nơi xuất màn hình, trong wrapper này sẽ sử dụng proxy object từ colorama<br>Lưu ý là nếu đối số file là một tệp viết được, theo như lệnh print() gốc, máy sẽ viết ra tệp. Nếu có tệp mà không viết được thì sẽ __vẫn in ra trên màn hình__ [1]<br>Ngoài tệp viết được ra thì đối số này sẽ bỏ qua các object khác | None      |
 | flush         | Có dọn bộ đệm khi in kết quả không                                                      | False    |
 ||||
 | f             | Màu của chữ [2] [3]                                                                     | WHITE    |
@@ -51,7 +50,7 @@ print('Or a line with a cyan background', f = 'black', b = 'cyan')
 > **GHI CHÚ**
 
 1. Đối với print() gốc của Python, nếu đối số file là tệp không viết được, Python sẽ báo lỗi. Còn PrintWithColor sẽ bỏ qua và trực tiếp in trên màn hình
-2. Bạn được quyền viết màu bằng chữ hoa/thường cũng chấp nhận nhé
+2. Bạn đó thể viết màu bằng chữ hoa/thường cũng chấp nhận nhé
 3. Các dải màu được chấp nhận là ['WHITE', 'RED', 'GREEN', 'YELLOW', 'BLUE', 'MAGENTA', 'CYAN', 'BLACK']
 4. Các kiểu màu được chấp nhận là ['NORMAL', 'DIM', 'BRIGHT']
 
