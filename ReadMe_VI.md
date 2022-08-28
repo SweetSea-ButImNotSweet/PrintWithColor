@@ -52,20 +52,16 @@ print('Or a line with a cyan background', f = 'black', b = 'cyan')
 4. Các kiểu màu được chấp nhận là ['NORMAL', 'DIM', 'BRIGHT']
 
 
-> **CẢNH BÁO!** Windows sẽ __**KHÔNG**__ hiển thị chính xác màu tối (dim) và màu bình thường (normal). Cho nên trong đa số trường hợp, bạn sẽ không nhìn thấy rõ sự khác biệt 
-> (**Đừng có đổ tội lên mình hoặc là tác giả của Colorama**, bởi vì __Windows không hỗ trợ__ ***mã ANSI cho văn bản có màu tối***):cry:
-> **Để biết thêm thông tin**, xui vui lòng truy cập vào cuối đoạn mô tả của Colorama: https://github.com/tartley/colorama#description
+> **CẢNH BÁO!** Windows sẽ __**KHÔNG**__ hiển thị chính xác màu tối (dim) và màu bình thường (normal). Cho nên trong đa số trường hợp, bạn sẽ không nhìn thấy rõ sự khác biệt <br> (**Đừng có đổ tội lên mình hoặc là tác giả của Colorama**, bởi vì __Windows không hỗ trợ__ ***mã ANSI cho văn bản có màu tối***):cry:<br>**Để biết thêm thông tin**, xui vui lòng truy cập vào cuối đoạn mô tả của Colorama: https://github.com/tartley/colorama#description
 
 # **Các thiết lập đi kèm với cú pháp này**
 
-> **LƯU Ý**: Nếu một trong các thiết lập này bị sai, chúng sẽ bị trả giá trị về **MẶC ĐỊNH** của thiết lập đó
-
-> **CÁCH SỬA THIẾT LẬP:** sử dụng cú pháp print.change_settings(), **ngoại trừ clear_settings()**
+> **LƯU Ý**: Nếu một trong các thiết lập này bị sai, chúng sẽ bị trả giá trị về **MẶC ĐỊNH** của thiết lập đó<br>**CÁCH SỬA THIẾT LẬP:** sử dụng cú pháp print.change_settings(), **ngoại trừ clear_settings()**
 
 ## **1. DoNotResetColor** (Không đặt lại màu về giá trị mặc định)
 
-> **Tác dụng:** Không reset lại màu sau khi chạy xong lệnh print()<
-> **Giá trị mặc định:** False **(boolean)**
+> **Tác dụng:** Không reset lại màu sau khi chạy xong lệnh print()<br>
+> **Giá trị mặc định:** False **(boolean)**<br>
 > **Các giá trị được đồng ý:** True, False **(boolean)**
 
 ```python
@@ -81,8 +77,8 @@ print('Dòng 2 thế nào cũng phải dùng màu từ lệnh print trước!')
 
 ## **2. DefaultForegroundColor** (Chỉnh giá trị màu chữ mặc định)
 
-> **Tác dụng:** Thay đổi màu chữ mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng màu do bạn chỉ định!)
-> **Giá trị mặc định:** WHITE **(string)**
+> **Tác dụng:** Thay đổi màu chữ mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng màu do bạn chỉ định!) <br>
+> **Giá trị mặc định:** WHITE **(string)** <br>
 > **Các giá trị được đồng ý:** WHITE, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, BLACK **(string)**
 
 
@@ -98,8 +94,8 @@ print('Chữ màu xanh lục ở đây nhé! Bạn thấy đấy, mình chưa ch
 
 ## **3. DefaultBackgroundColor** (Chỉnh giá trị màu nền mặc định)
 
-> **Tác dụng:** Thay đổi màu nền mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng màu do bạn chỉ định!)
-> **Giá trị mặc định:** BLACK **(string)**
+> **Tác dụng:** Thay đổi màu nền mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng màu do bạn chỉ định!) <br>
+> **Giá trị mặc định:** BLACK **(string)**<br>
 > **Các giá trị được đồng ý:** WHITE, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, BLACK
 
 
@@ -115,8 +111,8 @@ print('Nền màu xanh lục ở đây nhé! Bạn thấy đấy, mình chưa ch
 
 ## **4. DefaultStyle** (Chỉnh giá trị kiểu màu chữ mặc định)
 
-> **Tác dụng:** Thay đổi kiểu màu chữ mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng kiểu màu chữ do bạn chỉ định!)
-> **Giá trị mặc định:** NORMAL **(string)**
+> **Tác dụng:** Thay đổi kiểu màu chữ mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng kiểu màu chữ do bạn chỉ định!)<br>
+> **Giá trị mặc định:** NORMAL **(string)**<br>
 > **Các giá trị được đồng ý:** NORMAL, BRIGHT, DIM **(string)**
 
 
@@ -137,8 +133,8 @@ print('Nhưng dòng này thì lại có chữ sáng hơn bình thường!', s='b
 
 ## **5. clear_settings()** (Đặt toàn bộ giá trị về mặc định)
 
-> **Tác dụng:** Xoá toàn bộ cài đặt của PrintWithColor
-> **KHÔNG CÓ ĐỐI SỐ!**
+> **Tác dụng:** Xoá toàn bộ cài đặt của PrintWithColor<br>
+> **KHÔNG CÓ ĐỐI SỐ & KHÔNG CẢNH BÁO & KHÔNG CÓ GÌ XUẤT RA MÀN HÌNH!**
 
 
 ```python
