@@ -59,19 +59,19 @@ print('Or a line with a cyan background', f = 'black', b = 'cyan')
 3. Acceptable color styles are ['NORMAL', 'DIM', 'BRIGHT']
 
 
-> **WARNING!** Windows will **NOT** correctly display dark (dim) colors. So, in most cases, you won't notice a change if you put a when you leave text with dark color between text with normal one.
-> (**Don't blame me or the author of Colorama**, this is because __Windows doesn't support__ ***ANSI 'dim text'*** :cry:)
-> **For more infomation:** Please look down to the last line of colorama's description: https://github.com/tartley/colorama#description
+> **WARNING!** Windows will **NOT** correctly display dark (dim) colors. So, in most cases, you won't notice a change if you put a when you leave text with dark color between text with normal one.<br><br>(**Don't blame me or the author of Colorama**, this is because __Windows doesn't support__ ***ANSI 'dim text'*** :cry:)<br><br> **For more infomation:** Please look down to the last line of colorama's description: https://github.com/tartley/colorama#description
+
 
 # **Additional configuration**
 
-> **WARNING!**: If any of these settings are invalid, they will be reset to their **DEFAULT** values!
+> **WARNING!**: If any of these settings are invalid, they will be reset to their **DEFAULT** values!<br>
 > **How to change configuration?** using print.change_settings() syntax
 
 ## **1. DoNotResetColor**
 
-> **Effect:** Not reset color after every print() syntax is performed
-> **Default value:** False **(boolean)**
+
+> **Effect:** Not reset color after every print() syntax is performed<br>
+> **Default value:** False **(boolean)**<br>
 > **Acceptable value:** True, False **(boolean)**
 
 
@@ -88,8 +88,8 @@ print('Line 2 must be formatted in the same color as line 1!')
 
 ## **2. DefaultForegroundColor**
 
-> **Effect:** Change the default foreground color (When you're done with the print() syntax and the variable **DoNotResetColor = False**, the following print() syntax will use the color you specified!)
-> **Default value:** WHITE **(string)**
+> **Effect:** Change the default foreground color (When you're done with the print() syntax and the variable **DoNotResetColor = False**, the following print() syntax will use the color you specified!)<br>
+> **Default value:** WHITE **(string)**<br>
 > **Acceptable value:** WHITE, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, BLACK
 
 
@@ -105,8 +105,8 @@ print('Even without the f argument, this line must be green!')
 
 ## **3. DefaultBackgroundColor**
 
-> **Effect:** Change the default background color (When you're done with the print() syntax and the variable **DoNotResetColor = False**, the following print() syntax will use the color you specified!)
-> **Default value:** BLACK **(string)**
+> **Effect:** Change the default background color (When you're done with the print() syntax and the variable **DoNotResetColor = False**, the following print() syntax will use the color you specified!)<br>
+> **Default value:** BLACK **(string)**<br>
 > **Acceptable value:** DIM, NORMAL, BRIGHT
 
 
@@ -122,7 +122,7 @@ print('This line will have nice green background, although I don\'t use b argume
 
 ## **4. DefaultStyle**
 
-> **Effect:** Thay đổi kiểu màu nền mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng màu này!)
+> **Effect:** Change the default style of foreground color (When you're done with the print() syntax and the variable **DoNotResetColor = False**, the following print() syntax will use the style you specified!)<br>
 > **Default value:** NORMAL **(string)**
 
 
@@ -141,9 +141,8 @@ print('But this line will have a bright color'), s='bright')
 
 ## **5. clear_settings()** (Reset all settings of PrintWithColor)
 
-> **Effect:** Clear all PrintWithColor's settings!
+> **Effect:** Clear all PrintWithColor's settings!<br>
 > **NO ARGUMENT & NO WARNING & NO OUTPUT!**
-
 
 ```python
 print.clear_settings()
