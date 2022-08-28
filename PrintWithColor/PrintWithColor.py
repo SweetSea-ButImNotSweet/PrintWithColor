@@ -1,9 +1,10 @@
 # Call builtins library, allow me to use the pure print command in Python
 import builtins
+import PrintWithColorCore
 from PrintWithColorCore import *
 
 # Lệnh Printc là 
-class printc():
+class print():
 #   Lưu ý: sep, end, flush được thêm vào nhằm giữ tương thích ngược với lệnh print
 
 #                                                                                                                   s là kiểu màu chữ <--|

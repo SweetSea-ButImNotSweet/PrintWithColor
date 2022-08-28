@@ -1,4 +1,4 @@
-from PrintWithColor import printc as print
+from PrintWithColor import print as print
 print.change_settings('DoNotResetColor', True)
 print('Đây là dòng 1', f='black', b='green')
 print("Đây là dòng 2")

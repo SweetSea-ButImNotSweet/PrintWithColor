@@ -1,6 +1,6 @@
 # **PrintWithColor**
 
-A little Python wrapper that enhances the print() syntax by enabling text coloring on the screen.
+A tiny Python wrapper that enhances the print() syntax by enabling text coloring on the screen.
 
 
 > **NOTE:** This ReadMe.md file which you are seeing or reading here is in English, but the Vietnamese version is also available! If you want to see it,  [click here!](https://github.com/SweetSea-ButNotSweet/PrintWithColor/blob/master/ReadMe_VI.md)
@@ -8,13 +8,13 @@ A little Python wrapper that enhances the print() syntax by enabling text colori
 # **Installion**
 To install this package via PyPi, type like this command below to the Terminal or Command Prompt:
 
-```python
+```batch
 pip install PrintWithColor
 ```
 > For those of you who are wondering why I don't put the \$ character in front of the command as others do in other projects, here's why.
 
-> Because ***forgetting*** to **DELETE** ***the extra \$ character*** while pasting the command will result in the command ***FAILING!***.
-> This command may also be used on Windows, however on Linux, you should replace PIP with PIP3!
+> Because ***forgetting*** to __DELETE__ ***the extra \$ character*** while pasting the command will result in the command __*FAILING!*__.
+> This command may also be used on Windows, however on Linux, you should replace pip with pip3 (if you use pip, maybe Linux will call Python 2 instead Python 3!)
 
 # **Usage**
 This is the basic usage of **PrintWithColor**
@@ -27,114 +27,122 @@ print('Hello, I am a green line!', f = 'green', b= 'black')
 print('Or a line with a cyan background', f = 'black', b = 'cyan')
 ```
 
-### Đối số trong lệnh print() **của Python**
+### All argument in print() **from Python**
 
-| Argument        | Description | DefaultValue |
-|-|-|-|
-| textfrominput | The content you want to display on the screen, allows you to enter many arguments| Any   |
-| sep | A separate sign between the arguments (if there is only one argument in textfrominput, it will not appear anywhere) | ' ' |
-| end | Ending character, when there is only one argument or when textfrominput has reached its final argument, the ending character appears.     | '\n'     |
-| file          | Nơi xuất màn hình, trong Python mặc định sẽ là sys.stderr<br>Lưu ý là nếu đối số file là một tệp viết được, theo như lệnh print() gốc, máy sẽ viết ra tệp. Nếu có tệp mà không viết được thì sẽ __báo lỗi__ [1] | None      |
-| flush         | Có dọn bộ đệm khi in kết quả không                                                      | False    |
+| Argument      | Description                                                                                                                                                                                                                                                                                                                  | DefaultValue |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| textfrominput | The content you want to display on the screen, allows you to enter many arguments                                                                                                                                                                                                                                            | Any          |
+| sep           | A separate sign between the items in textfrominput argument (if there is only one argument in textfrominput, it will not appear anywhere)                                                                                                                                                                                                          | ' '          |
+| end           | Ending character, when there is only one argument or when textfrominput has reached its final argument, the ending character appears.                                                                                                                                                                                        | '\n'         |
+| file          | Where should the text be output? The default in Python is sys.stderr or your screen.<br> If the file argument is a __writable file__, Python will automatically __write to the file__ provided in the file argument instead of writing to the screen.<BR>If that file cannot be written, __an exception will be raised__ [1] | None         |
+| flush         | Should the buffer be cleaned up once the results are printed?                                                                                                                                                                                                                                                                | False        |
 
-### Đối số trong lệnh print() **của PrintWithColor**
+### All argument in Print() syntax **from PrintWithColor**
 
-| Đối số        | Mô tả                                                                                   | Mặc định |
-|---------------|-----------------------------------------------------------------------------------------|----------|
-| textfrominput | Nội dung bạn muốn gõ để hiện thỉ theo mặc định, cho phép sử dụng nhiều đối số           | Bất kỳ   |
-| sep           | Là dấu phân cách giữa các đối số (nếu chỉ có 1 đối số textfrominput thì ko có tác dụng) | ' '      |
-| end           | Kí tự kết thúc, chỉ tác dụng khi có 1 đối số/tới đối số cuối cùng của textfrominput     | '\n'     |
-| file          | Nơi xuất màn hình, trong wrapper này sẽ sử dụng proxy object từ colorama<br>Lưu ý là nếu đối số file là một tệp viết được, theo như lệnh print() gốc, máy sẽ viết ra tệp. Nếu có tệp mà không viết được thì sẽ __vẫn in ra trên màn hình__ [1]<br>Ngoài tệp viết được ra thì đối số này sẽ bỏ qua các object khác | None      |
-| flush         | Có dọn bộ đệm khi in kết quả không                                                      | False    |
-||||
-| f             | Màu của chữ [2] [3]                                                                     | WHITE    |
-| b             | Màu của nền chữ [2] [3]                                                                 | BLACK    |
-| s             | Kiểu màu của chữ [2] [4]                                                                | NORMAL   |
+| Argument      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Default |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| textfrominput | The content you want to display on the screen, allows you to enter many arguments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Any     |
+| sep           | A separate sign between the arguments (if there is only one argument in textfrominput, it will not appear anywhere)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | ' '     |
+| end           | Ending character, when there is only one argument or when textfrominput has reached its final argument, the ending character appears.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | '\n'    |
+| file          | Where should the text appear?<br>This wrapper will use the Colorama library's proxy object by default.<br><br>If the file argument is a __writeable file__, PrintWithColor will write the output to that file, ***just like the original print() syntax***.<br><br>PrintWithColor will __skip the file__ provided in it and __display the text on the screen__ if it is not writeable (or read-only).<br><br>You should also be aware that in order to use Colorama's proxy object, this argument will __skip__ ***all objects other than a writeable file!*** (Because this wrapper is cross-platform, I should use Colorma's proxy object to avoid any bugs/issues that may happen!) | None    |
+| flush         | Should the buffer be cleaned up once the results are printed?                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | False   |
+|               |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |         |
+| f             | Foreground color [2] [3]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | WHITE   |
+| b             | Background color [2] [3]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | BLACK   |
+| s             | Style of the foreground colour [2] [4]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | NORMAL  |
 
-> **GHI CHÚ**
+> **NOTE FOR PRINT() SYNTAX BETWEEN PYTHON AND PRINTWITHCOLOR**
 
-1. Đối với print() gốc của Python, nếu đối số file là tệp không viết được, Python sẽ báo lỗi. Còn PrintWithColor sẽ bỏ qua và trực tiếp in trên màn hình
-2. Bạn đó thể viết màu bằng chữ hoa/thường cũng chấp nhận nhé
-3. Các dải màu được chấp nhận là ['WHITE', 'RED', 'GREEN', 'YELLOW', 'BLUE', 'MAGENTA', 'CYAN', 'BLACK']
-4. Các kiểu màu được chấp nhận là ['NORMAL', 'DIM', 'BRIGHT']
+1. If the file argument is a read-only file. It will throw an exception in Python, but PrintWithColor will automatically ignore that argument and print the output directly to the screen.
+2. You can write the colour in uppercase or lowercase as well
+2. Acceptable color ranges are ['WHITE', 'RED', 'GREEN', 'YELLOW', 'BLUE', 'MAGENTA', 'CYAN', 'BLACK']
+3. Acceptable color styles are ['NORMAL', 'DIM', 'BRIGHT']
 
 
-> **LƯU Ý!**    WINDOWS SẼ __**KHÔNG**__ HIỂN THỊ CHÍNH XÁC MÀU TỐI (DIM) VÀ MÀU BÌNH THƯỜNG (NORMAL)  NÊN HẦU NHƯ BẠN SẼ KHÔNG NHÌN THẤY RÕ SỰ KHÁC BIỆT
+> **WARNING!** Windows will **NOT** correctly display dark (dim) colors. So, in most cases, you won't notice a change if you put a when you leave text with dark color between text with normal one.
+> (**Don't blame me or the author of Colorama**, this is because __Windows doesn't support__ ***ANSI 'dim text'*** :cry:)
+> **For more infomation:** Please look down to the last line of colorama's description: https://github.com/tartley/colorama#description
 
-# **CÁC THIẾT LẬP BỔ SUNG ĐI KÈM**
+# **Additional configuration**
 
-> **LƯU Ý**: Nếu một trong các thiết lập này bị sai, chúng sẽ bị trả giá trị về **MẶC ĐỊNH** của từng thiết lập!!!
+> **WARNING!**: If any of these settings are invalid, they will be reset to their **DEFAULT** values!
+> **How to change configuration?** using print.change_settings() syntax
 
-> **CÁCH GỌI:** sử dụng lệnh print.change_settings()
+## **1. DoNotResetColor**
 
-## **1. DoNotResetColor** (Không đặt lại màu về giá trị mặc định)
-
-> **Tác dụng:** Không reset lại màu sau khi chạy xong lệnh print()<
-> **Giá trị mặc định:** False **(boolean)**
-> **Các giá trị đồng ý:** WHITE, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, BLACK
+> **Effect:** Not reset color after every print() syntax is performed
+> **Default value:** False **(boolean)**
+> **Acceptable value:** True, False **(boolean)**
 
 
 ```python
 print.change_settings(1, True)
-# Hoặc là
+# or
 print.change_settings('DoNotResetColor', True)
-# đều như nhau
+# will return the same results!
 
-# Khi dùng
-print('Dòng 1', f='black', b='green')
-print('Dòng 2 thế nào cũng phải dùng màu từ lệnh print trước!')
+# When using
+print('Line 1', f='black', b='green')
+print('Line 2 must be formatted in the same color as line 1!')
 ```
 
-## **2. DefaultForegroundColor** (Chỉnh giá trị màu chữ mặc định)
+## **2. DefaultForegroundColor**
 
-> **Tác dụng:** Thay đổi màu chữ mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng màu này!)
-> **Giá trị mặc định:** WHITE **(string)**
-> **Các giá trị đồng ý:** WHITE, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, BLACK
+> **Effect:** Change the default foreground color (When you're done with the print() syntax and the variable **DoNotResetColor = False**, the following print() syntax will use the color you specified!)
+> **Default value:** WHITE **(string)**
+> **Acceptable value:** WHITE, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, BLACK
 
 
 ```python
 print.change_settings(2, 'GREEN')
-# Hoặc là
+# or
 print.change_settings('DefaultForegroundColor', 'GREEN')
-# đều như nhau
+# will return the same results!
 
-# Khi sử dụng
-print('Chữ màu xanh lục ở đây nhé! Bạn thấy đấy, mình chưa cho đối số f vào lệnh này cả!')
+# When using
+print('Even without the f argument, this line must be green!')
 ```
 
-## **3. DefaultBackgroundColor** (Chỉnh giá trị màu nền mặc định)
+## **3. DefaultBackgroundColor**
 
-> **Tác dụng:** Thay đổi màu nền mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng màu này!)
-> **Giá trị mặc định:** BLACK **(string)**
-> **Các giá trị đồng ý:** DIM, NORMAL, BRIGHT
+> **Effect:** Change the default background color (When you're done with the print() syntax and the variable **DoNotResetColor = False**, the following print() syntax will use the color you specified!)
+> **Default value:** BLACK **(string)**
+> **Acceptable value:** DIM, NORMAL, BRIGHT
 
 
 ```python
 print.change_settings(3, 'GREEN')
-# Hoặc là
+# or
 print.change_settings('DefaultBackgroundColor', 'GREEN')
-# đều như nhau
+# will return the same results!
 
-# Khi sử dụng
-print('Nền màu xanh lục ở đây nhé! Bạn thấy đấy, mình chưa cho đối số b vào lệnh này cả!')
+# When using
+print('This line will have nice green background, although I don\'t use b argument')
 ```
 
-## **4. DefaultStyle** (Chỉnh giá trị kiểu màu chữ mặc định)
+## **4. DefaultStyle**
 
-> **Tác dụng:** Thay đổi kiểu màu nền mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng màu này!)
-> **Giá trị mặc định:** NORMAL **(string)**
+> **Effect:** Thay đổi kiểu màu nền mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng màu này!)
+> **Default value:** NORMAL **(string)**
 
 
 ```python
 print.change_settings(4, 'NORMAL')
-# Hoặc là
+# or
 print.change_settings('DefaultStyle', 'NORMAL')
+
+# Example
+print.change_settings('DefaultStyle', 'NORMAL')
+print.change_settings('DoNotResetColor', 'True')
+
+print('Line 1 will have a normal-green color', f='green')
+print('But this line will have a bright color'), s='bright') 
 ```
 
-## **5. clear_settings()** (Đặt toàn bộ giá trị về mặc định)
+## **5. clear_settings()** (Reset all settings of PrintWithColor)
 
-> **Tác dụng:** Xoá toàn bộ cài đặt của PrintWithColor
-> **KHÔNG CÓ ĐỐI SỐ!**
+> **Effect:** Clear all PrintWithColor's settings!
+> **NO ARGUMENT & NO WARNING & NO OUTPUT!**
 
 
 ```python
