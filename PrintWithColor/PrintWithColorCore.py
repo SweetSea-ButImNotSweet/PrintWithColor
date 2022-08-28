@@ -188,3 +188,5 @@ def printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, fl
         file.close()
     except:
         pass
+
+get_settings()
