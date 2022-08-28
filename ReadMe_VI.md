@@ -52,7 +52,7 @@ print('Or a line with a cyan background', f = 'black', b = 'cyan')
 4. Các kiểu màu được chấp nhận là ['NORMAL', 'DIM', 'BRIGHT']
 
 
-> **CẢNH BÁO!** Windows sẽ __**KHÔNG**__ hiển thị chính xác màu tối (dim) và màu bình thường (normal). Cho nên trong đa số trường hợp, bạn sẽ không nhìn thấy rõ sự khác biệt <br> (**Đừng có đổ tội lên mình hoặc là tác giả của Colorama**, bởi vì __Windows không hỗ trợ__ ***mã ANSI cho văn bản có màu tối***):cry:<br>**Để biết thêm thông tin**, xui vui lòng truy cập vào cuối đoạn mô tả của Colorama: https://github.com/tartley/colorama#description
+> **CẢNH BÁO!** Windows sẽ __**KHÔNG**__ hiển thị chính xác màu tối (dim) và màu bình thường (normal). Cho nên trong đa số trường hợp, bạn sẽ không nhìn thấy rõ sự khác biệt <br><br> (**Đừng có đổ tội lên mình hoặc là tác giả của Colorama**, bởi vì __Windows không hỗ trợ__ ***mã ANSI cho văn bản có màu tối***):cry:<br><br>**Để biết thêm thông tin**, xui vui lòng truy cập vào cuối đoạn mô tả của Colorama: https://github.com/tartley/colorama#description
 
 # **Các thiết lập đi kèm với cú pháp này**
 
