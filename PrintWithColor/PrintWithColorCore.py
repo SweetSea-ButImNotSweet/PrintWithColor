@@ -1,4 +1,5 @@
 import builtins
+# Sorry everyone, all this code still not translated into English :[
 
 def get_settings(n=8):  # Code lấy file cài đặt
         try:

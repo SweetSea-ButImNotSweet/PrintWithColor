@@ -1,4 +1,4 @@
-from PrintWithColor import print as print
+from PrintWithColor.PrintWithColor import print as print
 
 print.change_settings(1, True)
 

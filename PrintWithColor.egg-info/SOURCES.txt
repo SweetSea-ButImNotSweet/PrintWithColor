@@ -6,6 +6,7 @@ PrintWithColor/PrintWithColorCore.py
 PrintWithColor.egg-info/PKG-INFO
 PrintWithColor.egg-info/SOURCES.txt
 PrintWithColor.egg-info/dependency_links.txt
+PrintWithColor.egg-info/requires.txt
 PrintWithColor.egg-info/top_level.txt
 test/test.py
 test/test02.py

@@ -6,7 +6,19 @@ with open("C:\\Users\\Harry\\Desktop\\abcdefgh\\TextEditor\\PrintWithColor" + "\
 
 setup(
     name='PrintWithColor',
-    # other arguments omitted
+    version = "0.0.1",
     long_description=long_description,
-    long_description_content_type='text/markdown'
+    long_description_content_type='text/markdown',
+    authors = "SweetSea-ButNotSweet",
+    description = "A tiny Python wrapper that enhances the print() syntax by enabling text coloring on the screen.",
+    readme = "ReadMe.md",
+    license = "LICENSE",
+    classifiers = [
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: The Unlicense (Unlicense)",
+        "Operating System :: OS Independent",
+    ],
+    include_package_data=True,
+    package_data={'package':['PrintWithColorCore.py']},
+    install_requires=['colorama'],
 )

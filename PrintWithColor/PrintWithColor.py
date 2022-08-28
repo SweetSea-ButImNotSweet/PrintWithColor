@@ -1,7 +1,9 @@
 # Call builtins library, allow me to use the pure print command in Python
 import builtins
-import PrintWithColorCore
-from PrintWithColorCore import *
+from PrintWithColor.PrintWithColorCore import *
+# from PrintWithColorCore import *
+
+# Sorry everyone, all this code still not translated into English :[
 
 # Lệnh Printc là 
 class print():
