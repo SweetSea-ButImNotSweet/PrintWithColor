@@ -13,6 +13,7 @@ pip install PrintWithColor
 
 # **Cách sử dụng**
 Đây là cách sử dụng cơ bản của **PrintWithColor**
+> **CẢNH BÁO! KHÔNG ĐƯỢC NẠP PrintWithColor.PrintWithColorCore (NGAY CẢ KHI IDE CỦA BẠN HIỆN NÓ!)**
 
 ```python
 from PrintWithColor import printc as print

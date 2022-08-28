@@ -5,6 +5,8 @@ A tiny Python wrapper that enhances the print() syntax by enabling text coloring
 
 > **NOTE:** This ReadMe.md file which you are seeing or reading here is in English, but the Vietnamese version is also available! If you want to see it,  [click here!](https://github.com/SweetSea-ButNotSweet/PrintWithColor/blob/master/ReadMe_VI.md)
 
+> **NOTE 2:** All the comment in the source still not translated completely. Please wait!
+
 # **Installion**
 To install this package via PyPi, type like this command below to the Terminal or Command Prompt:
 
@@ -18,7 +20,7 @@ pip install PrintWithColor
 
 # **Usage**
 This is the basic usage of **PrintWithColor**
-
+> **WARNING! DO NOT IMPORT PRINTWITHCOLOR.PRINTWITHCOLORCORE! (ALTHOUGH YOUR IDE SHOW IT!)**
 
 
 ```python
