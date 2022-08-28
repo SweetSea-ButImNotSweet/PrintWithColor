@@ -30,7 +30,7 @@ License: This is free and unencumbered software released into the public domain.
 Project-URL: Homepage, https://github.com/SweetSea-ButNotSweet/PrintWithColor
 Project-URL: Bug Tracker, https://github.com/SweetSea-ButNotSweet/PrintWithColor/issues
 Classifier: Programming Language :: Python :: 3
-Classifier: License :: OSI Approved :: The Unlicense
+Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.7
 Description-Content-Type: text/markdown
