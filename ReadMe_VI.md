@@ -22,50 +22,50 @@ print('Or a line with a cyan background', f = 'black', b = 'cyan')
 
 ### Đối số trong lệnh print() **của Python**
 
-| Đối số        | Mô tả                                                                                   | Mặc định |
-|---------------|-----------------------------------------------------------------------------------------|----------|
-| textfrominput | Nội dung bạn muốn hiển thị trên màn hình, cho phép bạn sử dụng nhiều đối số           | Bất kỳ   |
-| sep           | Là dấu phân cách giữa các đối số (nếu chỉ có 1 đối số textfrominput thì ko có tác dụng) | ' '      |
-| end           | Kí tự kết thúc, chỉ tác dụng khi có 1 đối số/tới đối số cuối cùng của textfrominput     | '\n'     |
-| file          | Nơi xuất màn hình, trong Python mặc định sẽ là sys.stderr<br>Lưu ý là nếu đối số file là một tệp viết được, theo như lệnh print() gốc, máy sẽ viết ra tệp. Nếu có tệp mà không viết được thì sẽ __báo lỗi__ [1] | None      |
-| flush         | Có dọn bộ đệm khi in kết quả không                                                      | False    |
+| Đối số        | Mô tả                                                                                                                                                                                                           | Mặc định |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| textfrominput | Nội dung bạn muốn hiển thị trên màn hình, cho phép bạn sử dụng nhiều đối số                                                                                                                                     | Bất kỳ   |
+| sep           | Là dấu phân cách giữa các đối số (nếu chỉ có 1 đối số textfrominput thì ko có tác dụng)                                                                                                                         | ' '      |
+| end           | Kí tự kết thúc, chỉ tác dụng khi có 1 đối số/tới đối số cuối cùng của textfrominput                                                                                                                             | '\n'     |
+| file          | Nơi xuất màn hình, trong Python mặc định sẽ là sys.stderr<br>Lưu ý là nếu đối số file là một tệp viết được, theo như lệnh print() gốc, máy sẽ viết ra tệp. Nếu có tệp mà không viết được thì sẽ __báo lỗi__ [1] | None     |
+| flush         | Có dọn bộ đệm khi in kết quả không                                                                                                                                                                              | False    |
 
 ### Đối số trong lệnh print() **của PrintWithColor**
 
-| Đối số        | Mô tả                                                                                   | Mặc định |
-|---------------|-----------------------------------------------------------------------------------------|----------|
-| textfrominput | Nội dung bạn muốn gõ để hiện thỉ theo mặc định, cho phép sử dụng nhiều đối số           | Bất kỳ   |
-| sep           | Là dấu phân cách giữa các đối số (nếu chỉ có 1 đối số textfrominput thì ko có tác dụng) | ' '      |
-| end           | Kí tự kết thúc, chỉ tác dụng khi có 1 đối số/tới đối số cuối cùng của textfrominput     | '\n'     |
-| file          | Nơi xuất màn hình, trong wrapper này sẽ sử dụng proxy object từ colorama<br>Lưu ý là nếu đối số file là một tệp viết được, theo như lệnh print() gốc, máy sẽ viết ra tệp. Nếu có tệp mà không viết được thì sẽ __vẫn in ra trên màn hình__ [1]<br>Ngoài tệp viết được ra thì đối số này sẽ bỏ qua các object khác | None      |
-| flush         | Có dọn bộ đệm khi in kết quả không                                                      | False    |
-||||
-| f             | Màu của chữ [2] [3]                                                                     | WHITE    |
-| b             | Màu của nền chữ [2] [3]                                                                 | BLACK    |
-| s             | Kiểu màu của chữ [2] [4]                                                                | NORMAL   |
+| Đối số        | Mô tả                                                                                                                                                                                                                                                                                                             | Mặc định |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| textfrominput | Nội dung bạn muốn gõ để hiện thỉ theo mặc định, cho phép sử dụng nhiều đối số                                                                                                                                                                                                                                     | Bất kỳ   |
+| sep           | Là dấu phân cách giữa các đối số (nếu chỉ có 1 đối số textfrominput thì ko có tác dụng)                                                                                                                                                                                                                           | ' '      |
+| end           | Kí tự kết thúc, chỉ tác dụng khi có 1 đối số/tới đối số cuối cùng của textfrominput                                                                                                                                                                                                                               | '\n'     |
+| file          | Nơi xuất màn hình, trong wrapper này sẽ sử dụng proxy object từ colorama<br>Lưu ý là nếu đối số file là một tệp viết được, theo như lệnh print() gốc, máy sẽ viết ra tệp. Nếu có tệp mà không viết được thì sẽ __vẫn in ra trên màn hình__ [1]<br>Ngoài tệp viết được ra thì đối số này sẽ bỏ qua các object khác | None     |
+| flush         | Có dọn bộ đệm khi in kết quả không                                                                                                                                                                                                                                                                                | False    |
+|               |                                                                                                                                                                                                                                                                                                                   |          |
+| f             | Màu của chữ [2] [3]                                                                                                                                                                                                                                                                                               | WHITE    |
+| b             | Màu của nền chữ [2] [3]                                                                                                                                                                                                                                                                                           | BLACK    |
+| s             | Kiểu màu của chữ [2] [4]                                                                                                                                                                                                                                                                                          | NORMAL   |
 
 > **GHI CHÚ**
 
-1. Đối với print() gốc của Python, nếu đối số file là tệp không viết được, Python sẽ báo lỗi. Còn PrintWithColor sẽ bỏ qua và trực tiếp in trên màn hình
+1. Đối với print() gốc của Python, nếu đối số file là tệp không viết được, Python sẽ tạo ra một ngoại lệ. Còn PrintWithColor sẽ bỏ qua và trực tiếp in trên màn hình
 2. Bạn đó thể viết màu bằng chữ hoa/thường cũng chấp nhận nhé
 3. Các dải màu được chấp nhận là ['WHITE', 'RED', 'GREEN', 'YELLOW', 'BLUE', 'MAGENTA', 'CYAN', 'BLACK']
 4. Các kiểu màu được chấp nhận là ['NORMAL', 'DIM', 'BRIGHT']
 
 
-> **LƯU Ý!** Windows sẽ __**không**__ hiển thị chính xác màu tối (dim) và màu bình thường (normal). Cho nên trong đa số trường hợp, bạn sẽ không nhìn thấy rõ sự khác biệt
+> **CẢNH BÁO!** Windows sẽ __**KHÔNG**__ hiển thị chính xác màu tối (dim) và màu bình thường (normal). Cho nên trong đa số trường hợp, bạn sẽ không nhìn thấy rõ sự khác biệt :cry:
+> **Để biết thêm thông tin**, xui vui lòng truy cập vào cuối đoạn mô tả của Colorama: https://github.com/tartley/colorama#description
 
 # **Các thiết lập đi kèm với cú pháp này**
 
-> **LƯU Ý**: Nếu một trong các thiết lập này bị sai, chúng sẽ bị trả giá trị về **MẶC ĐỊNH** của từng thiết lập!!!
+> **LƯU Ý**: Nếu một trong các thiết lập này bị sai, chúng sẽ bị trả giá trị về **MẶC ĐỊNH** của thiết lập đó
 
-> **CÁCH SỬA THIẾT LẬP:** sử dụng lệnh print.change_settings(), **ngoại trừ clear_settings()**
+> **CÁCH SỬA THIẾT LẬP:** sử dụng cú pháp print.change_settings(), **ngoại trừ clear_settings()**
 
 ## **1. DoNotResetColor** (Không đặt lại màu về giá trị mặc định)
 
 > **Tác dụng:** Không reset lại màu sau khi chạy xong lệnh print()<
 > **Giá trị mặc định:** False **(boolean)**
-> **Các giá trị đồng ý:** WHITE, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, BLACK
-
+> **Các giá trị được đồng ý:** True, False **(boolean)**
 
 ```python
 print.change_settings(1, True)
@@ -80,9 +80,9 @@ print('Dòng 2 thế nào cũng phải dùng màu từ lệnh print trước!')
 
 ## **2. DefaultForegroundColor** (Chỉnh giá trị màu chữ mặc định)
 
-> **Tác dụng:** Thay đổi màu chữ mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng màu này!)
+> **Tác dụng:** Thay đổi màu chữ mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng màu do bạn chỉ định!)
 > **Giá trị mặc định:** WHITE **(string)**
-> **Các giá trị đồng ý:** WHITE, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, BLACK
+> **Các giá trị được đồng ý:** WHITE, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, BLACK **(string)**
 
 
 ```python
@@ -97,9 +97,9 @@ print('Chữ màu xanh lục ở đây nhé! Bạn thấy đấy, mình chưa ch
 
 ## **3. DefaultBackgroundColor** (Chỉnh giá trị màu nền mặc định)
 
-> **Tác dụng:** Thay đổi màu nền mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng màu này!)
+> **Tác dụng:** Thay đổi màu nền mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng màu do bạn chỉ định!)
 > **Giá trị mặc định:** BLACK **(string)**
-> **Các giá trị đồng ý:** DIM, NORMAL, BRIGHT
+> **Các giá trị được đồng ý:** WHITE, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, BLACK
 
 
 ```python
@@ -114,8 +114,9 @@ print('Nền màu xanh lục ở đây nhé! Bạn thấy đấy, mình chưa ch
 
 ## **4. DefaultStyle** (Chỉnh giá trị kiểu màu chữ mặc định)
 
-> **Tác dụng:** Thay đổi kiểu màu nền mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng màu này!)
+> **Tác dụng:** Thay đổi kiểu màu chữ mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng kiểu màu chữ do bạn chỉ định!)
 > **Giá trị mặc định:** NORMAL **(string)**
+> **Các giá trị được đồng ý:** NORMAL, BRIGHT, DIM **(string)**
 
 
 ```python
