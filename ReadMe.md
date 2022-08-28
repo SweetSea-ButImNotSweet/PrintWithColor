@@ -61,12 +61,14 @@ print('Or a line with a cyan background', f = 'black', b = 'cyan')
 
 > **WARNING!** Windows will **NOT** correctly display dark (dim) colors. So, in most cases, you won't notice a change if you put a when you leave text with dark color between text with normal one.<br>(**Don't blame me or the author of Colorama**, this is because __Windows doesn't support__ ***ANSI 'dim text'*** :cry:)<br> **For more infomation:** Please look down to the last line of colorama's description: https://github.com/tartley/colorama#description
 
+
 # **Additional configuration**
 
 > **WARNING!**: If any of these settings are invalid, they will be reset to their **DEFAULT** values!
 > **How to change configuration?** using print.change_settings() syntax
 
 ## **1. DoNotResetColor**
+
 
 > **Effect:** Not reset color after every print() syntax is performed<br>
 > **Default value:** False **(boolean)**<br>
@@ -141,7 +143,6 @@ print('But this line will have a bright color'), s='bright')
 
 > **Effect:** Clear all PrintWithColor's settings!<br>
 > **NO ARGUMENT & NO WARNING & NO OUTPUT!**
-
 
 ```python
 print.clear_settings()

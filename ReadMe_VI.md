@@ -94,6 +94,7 @@ print('Chữ màu xanh lục ở đây nhé! Bạn thấy đấy, mình chưa ch
 
 ## **3. DefaultBackgroundColor** (Chỉnh giá trị màu nền mặc định)
 
+
 > **Tác dụng:** Thay đổi màu nền mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng màu do bạn chỉ định!) <br>
 > **Giá trị mặc định:** BLACK **(string)**<br>
 > **Các giá trị được đồng ý:** WHITE, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, BLACK
@@ -110,6 +111,7 @@ print('Nền màu xanh lục ở đây nhé! Bạn thấy đấy, mình chưa ch
 ```
 
 ## **4. DefaultStyle** (Chỉnh giá trị kiểu màu chữ mặc định)
+
 
 > **Tác dụng:** Thay đổi kiểu màu chữ mặc định (khi dùng xong lệnh print mà **DoNotResetColor = False** thì lệnh print tiếp theo sẽ dùng kiểu màu chữ do bạn chỉ định!)<br>
 > **Giá trị mặc định:** NORMAL **(string)**<br>
