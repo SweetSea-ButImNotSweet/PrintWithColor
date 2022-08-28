@@ -1,6 +1,6 @@
 # **PrintWithColor**
 
-A little Python wrapper that enhances the print() syntax by enabling text coloring on the screen.
+A tiny Python wrapper that enhances the print() syntax by enabling text coloring on the screen.
 
 
 > **NOTE:** This ReadMe.md file which you are seeing or reading here is in English, but the Vietnamese version is also available! If you want to see it,  [click here!](https://github.com/SweetSea-ButNotSweet/PrintWithColor/blob/master/ReadMe_VI.md)
