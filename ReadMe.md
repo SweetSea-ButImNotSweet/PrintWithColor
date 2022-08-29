@@ -3,9 +3,9 @@
 A tiny Python wrapper that enhances the print() syntax by enabling text coloring on the screen.
 
 
-> **NOTE:** This ReadMe.md file which you are seeing or reading here is in English, but the Vietnamese version is also available! If you want to see it,  [click here!](https://github.com/SweetSea-ButNotSweet/PrintWithColor/blob/master/ReadMe_VI.md)
+> **NOTE 1:** This ReadMe.md file which you are seeing or reading here is in English, but the Vietnamese version is also available! If you want to see it,  [click here!](https://github.com/SweetSea-ButNotSweet/PrintWithColor/blob/master/ReadMe_VI.md)
 
-> **NOTE 2:** All the comment in the source code still not translated completely, it may have some errors.<br>Need help? Have some questions? Just ask me in [Issues](https://github.com/SweetSea-ButNotSweet/PrintWithColor/issues), and I will try to read and answer all :smile:<br>Thanks
+> **NOTE 2:** All the comment in the source code still not translated completely, it may have some errors.<br>You don't understand something? Just ask me in [Issues](https://github.com/SweetSea-ButNotSweet/PrintWithColor/issues), and I will try to read and answer all :smile:<br>Thanks
 
 # **Installion**
 To install this package via PyPi, type like this command below to the Terminal or Command Prompt:
