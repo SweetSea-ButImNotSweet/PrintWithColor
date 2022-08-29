@@ -1,7 +1,7 @@
 import builtins
 # Sorry everyone, all this code still not translated into English :[
 
-def get_settings(n=8):  # Code lấy file cài đặt
+def get_settings(n=8):  # This code will get settings, if there are exception(s), it will reset everything
         try:
             with open('PrintWithColor.settings', 'r') as settings:
                 AllSettings = settings.read()
@@ -29,7 +29,7 @@ def get_settings(n=8):  # Code lấy file cài đặt
             return AllSettings
 
 
-def set_settings(n, value):     # Code ghi cài đặt mới
+def set_settings(n, value):     # <--  print.change_settngs
 
     AllSettings = get_settings()
     # 1       : DoNotResetColor
@@ -88,36 +88,25 @@ def printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, fl
         "BRIGHT" : STYLE.BRIGHT,
     }
 
-    # Bảng màu và kiểu đúng chuẩn để kiểm tra lỗi
+    # This list will contain all acceptable colors
     LegitColors = ['WHITE','RED','GREEN','YELLOW','BLUE','MAGENTA','CYAN','BLACK']
 
-    # Viết hoa các màu
+
     f = f.upper()
     b = b.upper()
     s = s.upper()
 
 
-    # Thế vào bảng màu
+    # Search in 3 dictionaries
     try:
         ff = foreground_dict[f]
         bb = background_dict[b]
         ss = styles_dict[s]
-    except:
+    except:                             # If errors, reset 3 colors into default and check errors
         ff = foreground_dict['WHITE']
         bb = background_dict['BLACK']
         ss = styles_dict['NORMAL']
 
-        '''# Đặt lại toàn bộ màu mặc định nếu màu mặc định cũng bị lỗi
-        if b == DefaultBackgroundColor or b == LastBackgroundColor or b not in LegitColors:
-            DefaultBackgroundColor = 'BLACK'
-            LastBackgroundColor = 'BLACK'
-        if f == DefaultForegroundColor or f == LastForegroundColor or f not in LegitColors or f in ['DIM','NORMAL','BRIGHT']:
-            DefaultForegroundColor = 'WHITE'
-            LastForegroundColor = 'WHITE'
-        if s == DefaultStyle or s not in ['DIM','NORMAL','BRIGHT']:
-            DefaultStyle = 'NORMAL'
-        if DoNotResetColor not in [True, False]:
-            DoNotResetColor = False'''
 
         if f == get_settings(2) or f not in LegitColors:
       # if f == DefaultForegroundColor or f == LastForegroundColor or f not in LegitColors:
@@ -142,11 +131,10 @@ def printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, fl
         if get_settings(1) not in [True, False]:
             set_settings(1, False)
 
-    # Đoạn này viết để mô phỏng lại lệnh print khi nhận nhiều argument (đối số) cùng lúc
     global fileIsWriteable
 
-    try:    # Kiểm tra xem file được đưa vào thực chất có phải là một tệp nào đó không
-            # Nếu phải thì cho viết ra file thay vì hiện trên màn hình
+    try:    # Check if file argument is a writeable file?
+            # If it is a writeable file, write the output to it
         if file != None:
             file.write('')
             fileIsWriteable = True

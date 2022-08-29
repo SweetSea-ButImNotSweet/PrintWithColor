@@ -7,24 +7,25 @@ from PrintWithColor.PrintWithColorCore import *
 
 # Lệnh Printc là 
 class print():
-#   Lưu ý: sep, end, flush được thêm vào nhằm giữ tương thích ngược với lệnh print
+#   Note: sep, end, flush is added to simulate the print() syntax
 
-#                                                                                                                   s là kiểu màu chữ <--|
+#                                                                                                      s is style of foreground color <--|
 #                                                                                                                                        |
-#                                                                                                 b là màu nền <--|                      |
+#                                                                                        b is background color <--|                      |
 #                                                                                                                 |                      |
-#                                                                          f là màu chữ <--|                      |                      |
+#                                                                 f is foreground color <--|                      |                      |
 #                                                                                          |                      |                      |
     def __init__ (self, *textfrominput, sep = ' ', end = '\n', file = None, flush = False, f = 'ForegroundColor', b = 'BackgroundColor', s = 'Style',):
-#                                        |          |                         |--> flush: dọn bộ đệm (mặc định là False)
+#                                        |          |                         |--> flush: wipe all cache? (Default: False)
 #                                        |          |
-#                                        |          |==> end là kí tự kết thúc hoàn toàn lệnh print
+#                                        |          |==> end is ending character
 #                                        |
-#                                        |--> sep hay seperate tách từng item nếu textfrominput có hơn 2 đối tượng
+#                                        |--> sep: seperate character between arguments
+#
+# For more infomation, visit: https://www.programiz.com/python-programming/methods/built-in/print
         
-        # Riêng đối số file không có tác dụng gì, bởi mặc định file bị giữ chân bởi Colorama
-        # Vì wrapper này viết cho Windows là chính, nên mình cũng không quan tâm lắm với Linux
-        # nhưng nếu có thời gian sẽ test thử trên Linux sau (còn MacOS thì nằm mơ, nhà mình không có máy Mac đâu mà đòi kêu ca sửa lỗi)
+        # file argument handle files only! It will skip if file argument is not a writeabke file!
+        # Reason: this wrapper is using colorama's proxy object!
 
         if f != 'ForegroundColor':
             set_settings(5, f)
@@ -43,7 +44,7 @@ class print():
 
         printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, flush = False, f = get_settings(5), b = get_settings(6), s = get_settings(7),)
 
-# get_settings() sẽ trả kết quả như sau
+# get_settings(n) will return all these results based on n
 # 1         : DoNotResetColor
 # 2 > 3 > 4 : DefaultForegroundColor > DefaultBackgroundColor > DefaultStyle
 # 5 > 6 > 7 : LastForegroundColor    > LastBackgroundColor    > LastStyle
