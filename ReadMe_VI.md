@@ -16,7 +16,7 @@ pip install PrintWithColor
 > **CẢNH BÁO! KHÔNG ĐƯỢC NẠP PrintWithColor.PrintWithColorCore (NGAY CẢ KHI IDE CỦA BẠN HIỆN NÓ!)**
 
 ```python
-from PrintWithColor import printc as print
+from PrintWithColor import print as print
 print('Hello, I am a green line!', f = 'green', b= 'black')
 print('Or a line with a cyan background', f = 'black', b = 'cyan')
 ```

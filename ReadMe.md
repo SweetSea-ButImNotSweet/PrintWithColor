@@ -24,7 +24,7 @@ This is the basic usage of **PrintWithColor**
 
 
 ```python
-from PrintWithColor import printc as print
+from PrintWithColor import print as print
 print('Hello, I am a green line!', f = 'green', b= 'black')
 print('Or a line with a cyan background', f = 'black', b = 'cyan')
 ```
