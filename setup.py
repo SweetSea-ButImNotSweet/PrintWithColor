@@ -20,5 +20,4 @@ setup(
     ],
     include_package_data=True,
     packages = ['PrintWithColor'],
-    install_requires=['colorama'],
 )
