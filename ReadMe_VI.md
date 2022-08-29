@@ -23,13 +23,13 @@ print('Or a line with a cyan background', f = 'black', b = 'cyan')
 
 ### Đối số trong lệnh print() **của Python**
 
-| Đối số        | Mô tả                                                                                                                                                                                                           | Mặc định |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| textfrominput | Nội dung bạn muốn hiển thị trên màn hình, cho phép bạn sử dụng nhiều đối số                                                                                                                                     | Bất kỳ   |
-| sep           | Là dấu phân cách giữa các đối số (nếu chỉ có 1 đối số textfrominput thì ko có tác dụng)                                                                                                                         | ' '      |
-| end           | Kí tự kết thúc, chỉ tác dụng khi có 1 đối số/tới đối số cuối cùng của textfrominput                                                                                                                             | '\n'     |
-| file          | Nơi xuất màn hình, trong Python mặc định sẽ là sys.stderr<br>Lưu ý là nếu đối số file là một tệp viết được, theo như lệnh print() gốc, máy sẽ viết ra tệp. Nếu có tệp mà không viết được thì sẽ __báo lỗi__ [1] | None     |
-| flush         | Có dọn bộ đệm khi in kết quả không                                                                                                                                                                              | False    |
+| Đối số        | Mô tả                                                                                                                                                                                                               | Mặc định |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| textfrominput | Nội dung bạn muốn hiển thị trên màn hình, cho phép bạn sử dụng nhiều đối số                                                                                                                                         | Bất kỳ   |
+| sep           | Là dấu phân cách giữa các đối số (nếu chỉ có 1 đối số textfrominput thì ko có tác dụng)                                                                                                                             | ' '      |
+| end           | Kí tự kết thúc, chỉ tác dụng khi có 1 đối số/tới đối số cuối cùng của textfrominput                                                                                                                                 | '\n'     |
+| file          | Nơi xuất màn hình, trong Python mặc định sẽ là sys.stderr<br><br>Lưu ý là nếu đối số file là một tệp viết được, theo như lệnh print() gốc, máy sẽ viết ra tệp. Nếu có tệp mà không viết được thì sẽ __báo lỗi__ [1] | None     |
+| flush         | Có dọn bộ đệm khi in kết quả không                                                                                                                                                                                  | False    |
 
 ### Đối số trong lệnh print() **của PrintWithColor**
 
