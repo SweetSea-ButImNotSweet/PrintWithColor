@@ -85,3 +85,5 @@ class print():
         except:
             pass
         del remove
+
+print.clear_settings() # Clear all settings when startup, make sure to not to accidentally using old modules!
