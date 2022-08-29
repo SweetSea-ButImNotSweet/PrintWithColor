@@ -5,7 +5,7 @@ A tiny Python wrapper that enhances the print() syntax by enabling text coloring
 
 > **NOTE:** This ReadMe.md file which you are seeing or reading here is in English, but the Vietnamese version is also available! If you want to see it,  [click here!](https://github.com/SweetSea-ButNotSweet/PrintWithColor/blob/master/ReadMe_VI.md)
 
-> **NOTE 2:** All the comment in the source still not translated completely. Please wait!
+> **NOTE 2:** All the comment in the source code still not translated completely, it may have some errors.<br>Need help? Have some questions? Just ask me in [Issues](https://github.com/SweetSea-ButNotSweet/PrintWithColor/issues), and I will try to read and answer all :smile:<br>Thanks
 
 # **Installion**
 To install this package via PyPi, type like this command below to the Terminal or Command Prompt:
@@ -20,7 +20,7 @@ pip install PrintWithColor
 
 # **Usage**
 This is the basic usage of **PrintWithColor**
-> **WARNING! DO NOT IMPORT PRINTWITHCOLOR.PRINTWITHCOLORCORE! (ALTHOUGH YOUR IDE SHOW IT!)**
+> **WARNING! DO NOT IMPORT PRINTWITHCOLOR.PRINTWITHCOLORCORE!** (ALTHOUGH YOUR IDE SHOW IT!)
 
 
 ```python
@@ -149,3 +149,6 @@ print('But this line will have a bright color'), s='bright')
 ```python
 print.clear_settings()
 ```
+# Problem? Question?
+Questions, problem: don't hestitate ask me on [Issues](https://github.com/SweetSea-ButNotSweet/PrintWithColor/issues)<br>
+Contact me? [Right here](https://github.com/SweetSea-ButNotSweet/SweetSea-ButNotSweet/issues)
