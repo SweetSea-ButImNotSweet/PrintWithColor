@@ -1,7 +1,7 @@
 [project]
 name = "PrintWithColor"
 version = "0.0.1"
-description="A tiny Python wrapper that enhances the print() syntax by enabling text coloring on the screen."
+description="A tiny wrapper for colorama library that enhances the print() syntax by enabling text coloring on the screen."
 readme = "ReadMe.md"
 requires-python = ">=3.5, <4"
 classifiers = [
