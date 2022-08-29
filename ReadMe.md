@@ -10,7 +10,7 @@ A tiny Python wrapper that enhances the print() syntax by enabling text coloring
 # **Installion**
 To install this package via PyPi, type like this command below to the Terminal or Command Prompt:
 
-```batch
+```bat
 pip install PrintWithColor
 ```
 > For those of you who are wondering why I don't put the \$ character in front of the command as others do in other projects, here's why.
