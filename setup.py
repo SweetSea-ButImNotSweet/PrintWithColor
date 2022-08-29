@@ -7,11 +7,10 @@ with open("C:\\Users\\Harry\\Desktop\\abcdefgh\\TextEditor\\PrintWithColor" + "\
 setup(
     name='PrintWithColor',
     version = "0.0.2",
-    description="A tiny Python wrapper that enhances the print() syntax by enabling text coloring on the screen",
+    description =" A tiny Python wrapper that enhances the print() syntax by enabling text coloring on the screen",
     long_description=long_description,
     long_description_content_type='text11/markdown',
     authors = "SweetSea-ButNotSweet",
-    description = "A tiny Python wrapper that enhances the print() syntax by enabling text coloring on the screen.",
     readme = "ReadMe.md",
     license = "LICENSE",
     classifiers = [
