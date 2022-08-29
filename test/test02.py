@@ -6,3 +6,4 @@ print('Line 1 with nice green', f='green')
 print('But this line is brighter!', s='bright') 
 
 print.clear_settings()
+print('How about this?')
