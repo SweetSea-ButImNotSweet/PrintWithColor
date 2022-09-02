@@ -10,3 +10,5 @@ PrintWithColor.egg-info/requires.txt
 PrintWithColor.egg-info/top_level.txt
 test/test.py
 test/test02.py
+test/test03.py
+test/test04.py

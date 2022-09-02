@@ -1,5 +1,4 @@
 # Call builtins library, allow me to use the pure print command in Python
-import builtins
 from PrintWithColor.PrintWithColorCore import *
 # from PrintWithColorCore import *
 
@@ -42,7 +41,7 @@ class print():
         else:
             s = get_settings(7)
 
-        printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, flush = False, f = get_settings(5), b = get_settings(6), s = get_settings(7),)
+        printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, flush = False, fore = get_settings(5), back = get_settings(6), forestyle = get_settings(7),)
 
 # get_settings(n) will return all these results based on n
 # 1         : DoNotResetColor
@@ -58,15 +57,16 @@ class print():
             5 : "LastForegroundColor",  # ---|
             6 : "LastBackgroundColor",  #    |--> USER CANNOT EDIT THEM! ~MEOW~
             7 : "LastStyle",            # ---|
+            8 : "ForceDisableColoramaProxyObject"
         }
 
         if str(n).isnumeric():
-            if 0 < n and n < 5:
+            if 0 < n and n < 5 or n == 8:
                 pass
             else:
                 raise Exception("Not found that setting!")
         else:
-            for i in range(1, 5):
+            for i in range(1, 9):
                 if settings_dict[i] != n:
                     vaildN = False
                 else:
@@ -86,5 +86,27 @@ class print():
         except:
             pass
         del remove
+
+    def all_colors():
+
+        print("256 colors! Thanks ANSI support 8-bit colors", f='white', b='black')
+        print("and right now, you can happy with me that")
+    
+        for a in range(0, 16):
+            for b in range(0, 16):
+                code = str(a * 16 + b)
+                print(u"\u001b[38;5;" + code + "m " + code.rjust(3), end = ' ')
+            print('')
+        print('')
+
+        c = -1
+        for i in "Don't worry, some old terminal apps don't support all 256 colors, but 16 colors!\nBut you still using some alternatives too, to display full 256 colors!":
+            c = c+1
+            d = str(c)
+            print("\u001b[38;5;" + d + "m" + i, end='', sep='')
+            if c == 255:
+                c = -1
+
+        print("\u001b[0m")
 
 print.clear_settings() # Clear all settings when startup, make sure to not to accidentally using old modules!
