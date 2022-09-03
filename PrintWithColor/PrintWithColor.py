@@ -54,9 +54,9 @@ class print():
             2 : "DefaultForegroundColor",
             3 : "DefaultBackgroundColor",
             4 : "DefaultStyle",
-            5 : "LastForegroundColor",  # ---|
-            6 : "LastBackgroundColor",  #    |--> USER CANNOT EDIT THEM! ~MEOW~
-            7 : "LastStyle",            # ---|
+            5 : "LastForegroundColor",  # --\
+            6 : "LastBackgroundColor",  #    |--> USER SHOULD NOT EDIT THEM! ~MEOW~ I WILL NOT TELL YOU ABOUT THIS IN README
+            7 : "LastStyle",            # --/
             8 : "ForceDisableColoramaProxyObject"
         }
 
@@ -90,8 +90,9 @@ class print():
     def all_colors():
 
         print("256 colors! Thanks ANSI support 8-bit colors", f='white', b='black')
-        print("and right now, you can happy with me that")
-    
+        print("and right now, you can happy with me.")
+        print("I will prepare to support RGB")
+
         for a in range(0, 16):
             for b in range(0, 16):
                 code = str(a * 16 + b)
