@@ -117,12 +117,20 @@ def printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, fl
     styles_dict = {
         "BOLD"      : "\u001b[1m",
         "UNDERLINE" : "\u001b[4m",
-        "REVERSED"  : "\u001b[7m,"
+        "REVERSED"  : "\u001b[7m",
+        "NORMAL"    : STYLE.NORMAL,
+        "BRIGHT"    : STYLE.BRIGHT,
+        "DIM"       : STYLE.DIM,
     }
 
     # This list will contain all acceptable colors
-    LegitColors1 = ['WHITE','RED','GREEN','YELLOW','BLUE','MAGENTA','CYAN','BLACK', 'D WHITE','D RED','D GREEN','D YELLOW','D BLUE','D MAGENTA','D CYAN','D BLACK', 'B WHITE','B RED','B GREEN','B YELLOW','B BLUE','B MAGENTA','B CYAN','B BLACK'] 
-    LegitColors2 = ['WHITE','RED','GREEN','YELLOW','BLUE','MAGENTA','CYAN','BLACK']
+    LegitColors1 = [
+        'WHITE','RED','GREEN','YELLOW','BLUE','MAGENTA','CYAN','BLACK',
+        'D WHITE','D RED','D GREEN','D YELLOW','D BLUE','D MAGENTA','D CYAN','D BLACK',
+        'B WHITE','B RED','B GREEN','B YELLOW','B BLUE','B MAGENTA','B CYAN','B BLACK'
+        ]
+
+    LegitColors2 = ['WHITE','RED','GREEN','YELLOW','BLUE','MAGENTA','CYAN','BLACK', "DIM", "NORMAL", "BRIGHT"]
 
 
     fore = fore.upper()
@@ -173,7 +181,7 @@ def printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, fl
       # elif fore == LastForegroundColor:
             set_settings(6, 'BLACK')
         
-        if forestyle == get_settings(4) or forestyle not in ['BOLD','ITALIC','RESERVED']:
+        if forestyle == get_settings(4) or forestyle not in ['BOLD','ITALIC','RESERVED', 'NORMAL', 'BRIGHT', 'DIM']:
             set_settings(4, 'NORMAL')
       # elif fore == LastForegroundColor:
         elif forestyle == get_settings(7):
@@ -199,7 +207,7 @@ def printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, fl
     for item in textfrominput:
         if item != textfrominput[-1]:
             if not fileIsWriteable:
-                if int(fore) in range(0, 256) or int(back) in range(0, 256) or ForceDisableColoramaProxyObject:
+                if int(fore) in range(0, 256) or int(back) in range(0, 256) or ForceDisableColoramaProxyObject or forestyle in ['BOLD','ITALIC','RESERVED', 'NORMAL', 'BRIGHT', 'DIM']:
                     builtins.print(ff+bb+ss+item, end=sep, flush=flush, file=file)
                 else:
                     builtins.print(ff+bb+ss+item, end=sep, flush=flush, file=__stream)
@@ -209,8 +217,9 @@ def printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, fl
         else:
             if not fileIsWriteable:
                 if str(fore).isnumeric():
-                    if int(fore) in range(0, 256) or int(back) in range(0, 256) or ForceDisableColoramaProxyObject:
+                    if int(fore) in range(0, 256) or int(back) in range(0, 256) or ForceDisableColoramaProxyObject or forestyle in ['BOLD','ITALIC','RESERVED', 'NORMAL', 'BRIGHT', 'DIM']:
                         builtins.print(ff+bb+ss+item, end=end, flush=flush, file=file)
+                        print("it's Okay")
                     else:
                         builtins.print(ff+bb+ss+item, end=end, flush=flush, file=__stream)
                 else:
