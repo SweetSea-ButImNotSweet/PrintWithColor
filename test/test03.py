@@ -2,12 +2,24 @@
 # 256 COLORS OR NOT
 # THIS CODE IS BASED ON: https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html
 
+print("\u001b[0mStandard colors")
+print()
+
 for a in range(0, 16):
     for b in range(0, 16):
         code = str(a * 16 + b)
         print(u"\u001b[38;5;" + code + "m " + code.rjust(3), end = ' ')
     print('')
 print('')
+
+for a in range(0, 16):
+    for b in range(0, 16):
+        code = str(a * 16 + b)
+        print(u"\u001b[48;5;" + code + "m " + code.rjust(3), end = ' ')
+    print('')
+print('')
+
+print('\u001b[0m')
 
 c = -1
 for i in "Do you see all 256 colors? If YES, congratulations!\nIf not, don't worry, some old terminal apps don't support all 256 colors, but 16 colors!":

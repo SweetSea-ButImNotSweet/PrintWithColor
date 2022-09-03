@@ -99,6 +99,13 @@ class print():
             print('')
         print('')
 
+        for a in range(0, 16):
+            for b in range(0, 16):
+                code = str(a * 16 + b)
+                print(u"\u001b[48;5;" + code + "m " + code.rjust(3), end = ' ')
+            print('')
+        print('')
+
         c = -1
         for i in "Don't worry, some old terminal apps don't support all 256 colors, but 16 colors!\nBut you still using some alternatives too, to display full 256 colors!":
             c = c+1
