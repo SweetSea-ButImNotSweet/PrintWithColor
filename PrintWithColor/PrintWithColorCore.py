@@ -83,35 +83,34 @@ def printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, fl
         "CYAN"      : FORE.CYAN,
         "BLACK"     : FORE.BLACK,
         # Dim colors
-        "D WHITE"   : STYLE.DIM + FORE.WHITE,
-        "D RED"     : STYLE.DIM + FORE.RED,
-        "D GREEN"   : STYLE.DIM + FORE.GREEN,
-        "D YELLOW"  : STYLE.DIM + FORE.YELLOW,
-        "D BLUE"    : STYLE.DIM + FORE.BLUE,
-        "D MAGENTA" : STYLE.DIM + FORE.MAGENTA,
-        "D CYAN"    : STYLE.DIM + FORE.CYAN,
-        "D BLACK"   : STYLE.DIM + FORE.BLACK,
-
+        "D WHITE"   : STYLE.DIM     + FORE.WHITE,
+        "D RED"     : STYLE.DIM     + FORE.RED,
+        "D GREEN"   : STYLE.DIM     + FORE.GREEN,
+        "D YELLOW"  : STYLE.DIM     + FORE.YELLOW,
+        "D BLUE"    : STYLE.DIM     + FORE.BLUE,
+        "D MAGENTA" : STYLE.DIM     + FORE.MAGENTA,
+        "D CYAN"    : STYLE.DIM     + FORE.CYAN,
+        "D BLACK"   : STYLE.DIM     + FORE.BLACK,
         # Normal colors
-        "B WHITE"   : STYLE.BRIGHT + FORE.WHITE,
-        "B RED"     : STYLE.BRIGHT + FORE.RED,
-        "B GREEN"   : STYLE.BRIGHT + FORE.GREEN,
-        "B YELLOW"  : STYLE.BRIGHT + FORE.YELLOW,
-        "B BLUE"    : STYLE.BRIGHT + FORE.BLUE,
-        "B MAGENTA" : STYLE.BRIGHT + FORE.MAGENTA,
-        "B CYAN"    : STYLE.BRIGHT + FORE.CYAN,
-        "B BLACK"   : STYLE.BRIGHT + FORE.BLACK,
+        "B WHITE"   : STYLE.BRIGHT  + FORE.WHITE,
+        "B RED"     : STYLE.BRIGHT  + FORE.RED,
+        "B GREEN"   : STYLE.BRIGHT  + FORE.GREEN,
+        "B YELLOW"  : STYLE.BRIGHT  + FORE.YELLOW,
+        "B BLUE"    : STYLE.BRIGHT  + FORE.BLUE,
+        "B MAGENTA" : STYLE.BRIGHT  + FORE.MAGENTA,
+        "B CYAN"    : STYLE.BRIGHT  + FORE.CYAN,
+        "B BLACK"   : STYLE.BRIGHT  + FORE.BLACK,
     }
 
     background_dict = {
-        "WHITE"  : BACK.WHITE,
-        "RED"    : BACK.RED,
-        "GREEN"  : BACK.GREEN,
-        "YELLOW" : BACK.YELLOW,
-        "BLUE"   : BACK.BLUE,
-        "MAGENTA": BACK.MAGENTA,
-        "CYAN"   : BACK.CYAN,
-        "BLACK"  : BACK.BLACK,
+        "WHITE"     : BACK.WHITE,
+        "RED"       : BACK.RED,
+        "GREEN"     : BACK.GREEN,
+        "YELLOW"    : BACK.YELLOW,
+        "BLUE"      : BACK.BLUE,
+        "MAGENTA"   : BACK.MAGENTA,
+        "CYAN"      : BACK.CYAN,
+        "BLACK"     : BACK.BLACK,
     }
 
     styles_dict = {
@@ -207,8 +206,11 @@ def printToComputer(self, *textfrominput, sep = ' ', end = '\n', file = None, fl
     for item in textfrominput:
         if item != textfrominput[-1]:
             if not fileIsWriteable:
-                if int(fore) in range(0, 256) or int(back) in range(0, 256) or ForceDisableColoramaProxyObject or forestyle in ['BOLD','ITALIC','RESERVED', 'NORMAL', 'BRIGHT', 'DIM']:
-                    builtins.print(ff+bb+ss+item, end=sep, flush=flush, file=file)
+                if str(fore).isnumeric():
+                    if int(fore) in range(0, 256) or int(back) in range(0, 256) or ForceDisableColoramaProxyObject or forestyle in ['BOLD','ITALIC','RESERVED', 'NORMAL', 'BRIGHT', 'DIM']:
+                        builtins.print(ff+bb+ss+item, end=sep, flush=flush, file=file)
+                    else:
+                        builtins.print(ff+bb+ss+item, end=sep, flush=flush, file=__stream)
                 else:
                     builtins.print(ff+bb+ss+item, end=sep, flush=flush, file=__stream)
             else:

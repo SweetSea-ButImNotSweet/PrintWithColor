@@ -3,9 +3,9 @@
 A tiny Python wrapper that enhances the print() syntax by enabling text coloring on the screen.
 
 
-> **NOTE 1:** This ReadMe.md file which you are seeing or reading here is in English, but the Vietnamese version is also available! If you want to see it,  [click here!](https://github.com/SweetSea-ButNotSweet/PrintWithColor/blob/master/ReadMe_VI.md)
+> **WARNING!** Vietnamese version of ReadMe.md is outdated. Sorry, but I don't have time to edit it.<br>Please use English version for reference
 
-> **NOTE 2:** All the comment in the source code still not translated completely, it may have some errors.<br>You don't understand something? Just ask me in [Issues](https://github.com/SweetSea-ButNotSweet/PrintWithColor/issues), and I will try to read and answer all :smile:<br>Thanks
+> **NOTE:** All the comment in the source code still not translated completely, it may have some errors.<br>You don't understand something? Just ask me in [Issues](https://github.com/SweetSea-ButNotSweet/PrintWithColor/issues), and I will try to read and answer all :smile:<br>Thanks
 
 # **Installion**
 To install this package via PyPi, type like this command below to the Terminal or Command Prompt:
@@ -58,11 +58,12 @@ print('Or a line with a cyan background', f = 'black', b = 'cyan')
 > **NOTE FOR PRINT() SYNTAX BETWEEN PYTHON AND PRINTWITHCOLOR**
 
 1. If the file argument is a read-only file. It will throw an exception in Python, but PrintWithColor will automatically ignore that argument and print the output directly to the screen.
+> **Start from 0.0.2**, PrintWithColor will change BRIGHT, DIM, NORMAL
 2. You can write the colour in uppercase or lowercase as well
-3. Acceptable color ranges are ['WHITE', 'RED', 'GREEN', 'YELLOW', 'BLUE', 'MAGENTA', 'CYAN', 'BLACK']
-4. Acceptable color styles are ['NORMAL', 'DIM', 'BRIGHT']
+3. Acceptable color ranges are WHITE, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, BLACK
+4. Acceptable color styles are BOLD, ITALIC, REVERSED
 
-> **STARTING FROM 0.0.2**, PrintWithColor will recieve the color with style in argument f<br>**EXAMPLE**:
+> **STARTING FROM 0.0.2**, PrintWithColor will recieve the color with style in argument f (foreground color)<br>**EXAMPLE**:
 > ```python
 > print("Bright blue", f = "B BLUE")
 > print("Dim    cyan", f = "D CYAN")
@@ -117,7 +118,7 @@ print('Even without the f argument, this line must be green!')
 
 > **Effect:** Change the default background color (When you're done with the print() syntax and the variable **DoNotResetColor = False**, the following print() syntax will use the color you specified!)<br>
 > **Default value:** BLACK **(string)**<br>
-> **Acceptable value:** DIM, NORMAL, BRIGHT
+> **Acceptable value:** WHITE, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, BLACK
 
 
 ```python
@@ -133,7 +134,8 @@ print('This line will have nice green background, although I don\'t use b argume
 ## **4. DefaultStyle**
 
 > **Effect:** Change the default style of foreground color (When you're done with the print() syntax and the variable **DoNotResetColor = False**, the following print() syntax will use the style you specified!)<br>
-> **Default value:** NORMAL **(string)**
+> **Default value:** NORMAL **(string)**<br>
+> **Acceptable value:** DIM, NORMAL, BRIGHT
 
 
 ```python
@@ -157,10 +159,15 @@ print('But this line will have a bright color'), s='bright')
 ```python
 print.clear_settings()
 ```
-## **8. ForceDisableColoramaProxyObject()** (Try to avoid using Colorama Proxy Object)
+## **8. ForceDisableColoramaProxyObject** (Try to avoid using Colorama's Proxy Object)
 
-> **NOTE:** You may don't need this settings, in most cases<br>
+> **NOTE:** You may don't need this settings, in most cases<br>Why? Because PrintWithColor will avoid using Colorama's Proxy Object if you are using 4-bit colors with 8-bit colors, or using file argument<br>
 > **NO ARGUMENT & NO WARNING & NO OUTPUT!**
+```python
+print.change_settings(8, True)
+# or
+print.change_settings('ForceDisableColoramaProxyObject', True)
+```
 
 # Problem? Question?
 Questions, problem: don't hestitate ask me on [Issues](https://github.com/SweetSea-ButNotSweet/PrintWithColor/issues)<br>
