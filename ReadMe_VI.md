@@ -1,6 +1,13 @@
 # **PrintWithColor**
 
-Một wrapper nhỏ nhắn xinh xắn bằng cách làm cú pháp print() mạnh mẽ hơn bằng cách cho phép print() có khả năng tô màu cho chữ
+Một wrapper nhỏ nhắn xinh xắn bằng cách làm cú pháp print() mạnh mẽ hơn bằng cách cho phép print() có khả năng tô màu cho chữ (Dùng kèm với Colorama)
+
+# CẢNH BÁO: ĐÃ DỪNG HỖ TRỢ!
+Xin chào mọi người! Dự án này được làm ra với một ít thời gian rảnh mình có. Wrapper này có thể hữu ích, nhưng mình cảm giác là câu lệnh nó vẫn còn hơi phức tạp
+
+Những ai đang dùng dự án này hiện sẽ không bị ảnh hưởng, nhưng có điều là mình sẽ không cập nhật thư viện này nữa! Cho nên là nếu bạn tình cờ nhìn thấy dự án này, bạn vẫn có thể cài đặt nhưng không khuyến khích
+
+Dự án này sẽ được đặt ở chế độ CHỈ ĐỌC **MÃI MÃI**<br>Mình cũng ước có thêm thời gian rảnh lắm chứ bộ, nhưng giờ thì không thể. Mình xin lỗi!
 
 # **Cách cài đặt**
 Để cài đặt qua thư viện PyPi, hãy gõ
@@ -31,7 +38,7 @@ print('Or a line with a cyan background', f = 'black', b = 'cyan')
 | file          | Nơi xuất màn hình, trong Python mặc định sẽ là sys.stderr<br><br>Lưu ý là nếu đối số file là một tệp viết được, theo như lệnh print() gốc, máy sẽ viết ra tệp. Nếu có tệp mà không viết được thì sẽ __báo lỗi__ [1] | None     |
 | flush         | Có dọn bộ đệm khi in kết quả không                                                                                                                                                                                  | False    |
 
-### Đối số trong lệnh print() **của PrintWithColor**
+### Các đối số trong lệnh print() **của PrintWithColor**
 
 | Đối số        | Mô tả                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Mặc định |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |

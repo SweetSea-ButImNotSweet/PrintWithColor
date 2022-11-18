@@ -1,11 +1,17 @@
 # **PrintWithColor**
 
-A tiny Python wrapper that enhances the print() syntax by enabling text coloring on the screen.
+A tiny Python wrapper that enhances the print() syntax by enabling text coloring on the screen. (Use with Colorama)
 
+# WARNING: END OF SUPPORT!
+Hello there! This project is made in a little free time. Since it can be useful, but I think the syntax still complex and I want to rewrite this project
 
-> **NOTE 1:** This ReadMe.md file which you are seeing or reading here is in English, but the Vietnamese version is also available! If you want to see it,  [click here!](https://github.com/SweetSea-ButNotSweet/PrintWithColor/blob/master/ReadMe_VI.md)
+For who are using this wrapper will not be affected anything, but I will not update anymore! So if you are by chance see this project, you can install but not recommended
 
-> **NOTE 2:** All the comment in the source code still not translated completely, it may have some errors.<br>You don't understand something? Just ask me in [Issues](https://github.com/SweetSea-ButNotSweet/PrintWithColor/issues), and I will try to read and answer all :smile:<br>Thanks
+This project is read-only **FOREVER**<br>I wish I could have more free time, but now I can't. Sorry!
+
+> **NOTE 1:** Bạn muốn đọc file README bằng tiếng Việt à?[Nhấn vào đây!](https://github.com/SweetSea-ButNotSweet/PrintWithColor/blob/master/ReadMe_VI.md)
+
+> **NOTE 2:** All the comments in the source code still not translated completely, it may have some errors.<br>You don't understand something? Just ask me in [Issues](https://github.com/SweetSea-ButNotSweet/PrintWithColor/issues), and I will try to read and answer all :smile:<br>Thanks
 
 # **Installion**
 To install this package via PyPi, type like this command below to the Terminal or Command Prompt:
