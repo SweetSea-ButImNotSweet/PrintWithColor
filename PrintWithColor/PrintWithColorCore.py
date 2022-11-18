@@ -1,5 +1,5 @@
 import builtins
-# Sorry everyone, all this code still not translated into English :[
+# Sorry everyone, all this comment still not translated into English :[
 
 def get_settings(n=8):  # This code will get settings, if there are exception(s), it will reset everything
         try:

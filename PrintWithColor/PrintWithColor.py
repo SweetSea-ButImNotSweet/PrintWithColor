@@ -85,6 +85,5 @@ class print():
             remove('PrintWithColor.settings')
         except:
             pass
-        del remove
 
 print.clear_settings() # Clear all settings when startup, make sure to not to accidentally using old modules!
