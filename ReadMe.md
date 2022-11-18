@@ -9,9 +9,13 @@ For who are using this wrapper will not be affected anything, but I will not upd
 
 This project is read-only **FOREVER**<br>I wish I could have more free time, but now I can't. Sorry!
 
-> **NOTE 1:** Bạn muốn đọc file README bằng tiếng Việt à?[Nhấn vào đây!](https://github.com/SweetSea-ButNotSweet/PrintWithColor/blob/master/ReadMe_VI.md)
+-------------------------------------------------------------------------------------------------------------------------------------
+
+> **NOTE 1:** Bạn muốn đọc file README bằng tiếng Việt à? [Nhấn vào đây!](https://github.com/SweetSea-ButNotSweet/PrintWithColor/blob/master/ReadMe_VI.md)
 
 > **NOTE 2:** All the comments in the source code still not translated completely, it may have some errors.<br>You don't understand something? Just ask me in [Issues](https://github.com/SweetSea-ButNotSweet/PrintWithColor/issues), and I will try to read and answer all :smile:<br>Thanks
+
+-------------------------------------------------------------------------------------------------------------------------------------
 
 # **Installion**
 To install this package via PyPi, type like this command below to the Terminal or Command Prompt:
