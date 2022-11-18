@@ -86,4 +86,4 @@ class print():
         except:
             pass
 
-print.clear_settings() # Clear all settings when startup, make sure to not to accidentally using old modules!
+print.clear_settings() # Clear all settings when startup, make sure to not to accidentally using old settings!
